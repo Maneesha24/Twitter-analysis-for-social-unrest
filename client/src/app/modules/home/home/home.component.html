@@ -1,49 +1,54 @@
 <div class="container">
-    <div class="row justify-content-between">
-        <div class="col-5 d-flex justify-content-between align-items-center bg-grey border br14">
-            <div class="f22 p-4">
-                <p class="f35 font-baloo">Hello!</p>
-                <p>It's good to see you back</p>
+    <div class="row">
+        <div class="col-md-6 col-12">
+            <div class="d-flex justify-content-between align-items-center bg-grey border br14">
+                <div class="f22 p-4">
+                    <p class="f35 font-baloo">Hello!</p>
+                    <p>It's good to see you back</p>
+                </div>
+                <img src="../../../../assets/images/Illustration.svg" class="img" />
             </div>
-            <img src="../../../../assets/images/Illustration.svg" class="img" />
         </div>
-        <div class="col-6">
-            <div class="row">
-                <div class="col-9 p-0">
+        <div class="col-md-6">
+            <div class="row mt-2 mt-md-0 text-center">
+                <div class="col-8">
                     <input placeholder="Enter search" class="bg-grey w-100 border br5 pt-2 pb-2" />
                     <span class="icon-search search"></span>
                 </div>
-                <span class="col icon-bell f30 mt-1"></span>
-                <span class="col icon-user f30 mt-1">&#8595;</span>
+                <span class="col-2 icon-bell f30 mt-1"></span>
+                <span class="col-2 icon-user f30 mt-1">&#8595;</span>
             </div>
-            <div class="row d-flex justify-content-between mt-3">
-                <div class="col-md-5 d-flex justify-content-around align-items-center bg-grey br14">
-                    <div class="font-baloo f80">?</div>
-                    <div class="d-flex flex-column">
-                        <div class="f22">Protest</div>
-                        <div class="f22">tweets</div>
+            <div class="row mt-2">
+                <div class="col-md-6 col-12">
+                    <div class="mt-2 mt-md-0 d-flex justify-content-around align-items-center bg-grey br14">
+                        <div class="font-baloo f80">{{result?.data?.length}}</div>
+                        <div class="d-flex flex-column">
+                            <div class="f22">Protest</div>
+                            <div class="f22">tweets</div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-5 d-flex justify-content-around align-items-center bg-grey br14">
-                    <div class="font-baloo f80">?</div>
-                    <div class="d-flex flex-column">
-                        <div class="f20">Total</div>
-                        <div class="f20">tweets</div>
+                <div class="col-md-6 col-12">
+                    <div class="mt-2 mt-md-0 d-flex justify-content-around align-items-center bg-grey br14">
+                        <div class="font-baloo f80">?</div>
+                        <div class="d-flex flex-column">
+                            <div class="f20">Total</div>
+                            <div class="f20">tweets</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-
-<div></div>
-    <div class="row justify-content-between mt-5">
-        <div class="col-5">
+    <div class="row mt-5">
+        <div class="col-md-6 col-12">
             <h4 class="font-baloo">Most retweeted tweets</h4>
-            <div *ngFor="let data of [1,2,3,4,5,6,7]; let i = index" class="bg-grey p-2 mt-2 mb-2 br14 font-bold">Tweet - {{i}}</div>
-        </div>
-        <div class="col-5">
-            <img src="../../../../assets/images/map.png" alt="map" class="w-100 h-100" />
+            <div *ngFor="let val of result?.data; let i = index">
+                <div *ngIf="i < 15" class="bg-grey p-2 mt-2 mb-2 br14 font-bold">
+                   {{val?.text}}
+                </div>
+            </div>
         </div>
     </div>
 </div>

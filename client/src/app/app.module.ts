@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidebarModule } from './components/sidebar/sidebar.module';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { SidebarModule } from './components/sidebar/sidebar.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SidebarModule
+    SidebarModule,
+    NgxEchartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

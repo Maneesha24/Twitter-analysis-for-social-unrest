@@ -14,6 +14,11 @@
     background: #F5F5F7;
 }
 
+//Box shadow
+.box-shadow-grey {
+    box-shadow: 0px 3px 6px #a5a5a5;
+}
+
 // Font size
 .f20{
     font-size: 20px;
@@ -60,4 +65,47 @@
 .card{
     background: #F5F5F7;
     border-radius: 14px;
+}
+
+.bg-highly-violent {
+    background-color: #14557b;
+}
+
+.bg-high-violent {
+    background-color: #1779b3;
+}
+
+.bg-neutral-violent {
+    background-color: rgb(22, 200, 224);
+}
+
+.bg-lowly-violent{
+    background-color: rgb(22, 224, 204);
+}
+
+.bg-low-violent{
+    background-color: #7fcec5;
+}
+
+.text-highly-violent{
+    color: rgb(0, 217, 255);
+    color: #14557b;
+}
+
+.text-high-violent{
+    color: rgb(3, 218, 247);
+    color: #1779b3;
+}
+
+.text-neutral-violent{
+    color: rgb(22, 200, 224);
+}
+
+.text-lowly-violent{
+    color: rgb(22, 224, 204);
+}
+
+.text-low-violent{
+    // color: rgb(30, 191, 174);
+    color: #7fcec5;
 }

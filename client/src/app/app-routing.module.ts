@@ -11,6 +11,11 @@ const routes: Routes = [
     path: 'statistics',
     pathMatch: 'full',
     loadChildren: () => import('./modules/statistics/statistics.module').then((m) => m.StatisticsModule)
+  },
+  {
+    path: 'notifications',
+    pathMatch: 'full',
+    loadChildren: () => import('./modules/notifications/notifications.module').then((m) => m.NotificationsModule)
   }
 ];
 

@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-6 col-12">
-            <div class="d-flex justify-content-between align-items-center bg-grey border br14">
+            <div class="d-flex justify-content-between align-items-center bg-grey box-shadow-grey border br14">
                 <div class="f22 p-4">
                     <p class="f35 font-baloo">Hello!</p>
                     <p>It's good to see you back</p>
@@ -20,8 +20,8 @@
             </div>
             <div class="row mt-2">
                 <div class="col-md-6 col-12">
-                    <div class="mt-2 mt-md-0 d-flex justify-content-around align-items-center bg-grey br14">
-                        <div class="font-baloo f80">{{protestTweets?.length}}</div>
+                    <div class="mt-2 mt-md-0 d-flex justify-content-around align-items-center bg-grey box-shadow-grey br14">
+                        <div class="font-baloo f80">{{outputdata?.length}}</div>
                         <div class="d-flex flex-column">
                             <div class="f22">Protest</div>
                             <div class="f22">tweets</div>
@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-12">
-                    <div class="mt-2 mt-md-0 d-flex justify-content-around align-items-center bg-grey br14">
+                    <div class="mt-2 mt-md-0 d-flex justify-content-around align-items-center bg-grey box-shadow-grey br14">
                         <div class="font-baloo f80">{{result?.length}}</div>
                         <div class="d-flex flex-column">
                             <div class="f20">Total</div>
@@ -45,16 +45,16 @@
         <div class="col-md-6 col-12">
             <h4 class="font-baloo">Most retweeted tweets</h4>
             <div class="d-flex justify-content-end align-items-center">
-                <div class="bg-highly-violent" style="width: 13px;height: 13px;margin-right: 0.5rem;"></div>
-                <div class="bg-high-violent" style="width: 13px;height: 13px;margin-right: 0.5rem;"></div>
-                <div class="bg-neutral-violent" style="width: 13px;height: 13px;margin-right: 0.5rem;"></div>
-                <div class="bg-lowly-violent" style="width: 13px;height: 13px;margin-right: 0.5rem;"></div>
-                <div class="bg-low-violent" style="width: 13px;height: 13px;margin-right: 0.5rem;"></div>
+                <div class="box-shadow-grey bg-highly-violent br3" style="width: 13px;height: 13px;margin-right: 0.5rem;"></div>
+                <div class="box-shadow-grey bg-high-violent br3" style="width: 13px;height: 13px;margin-right: 0.5rem;"></div>
+                <div class="box-shadow-grey bg-neutral-violent br3" style="width: 13px;height: 13px;margin-right: 0.5rem;"></div>
+                <div class="box-shadow-grey bg-lowly-violent br3" style="width: 13px;height: 13px;margin-right: 0.5rem;"></div>
+                <div class="box-shadow-grey bg-low-violent br3" style="width: 13px;height: 13px;margin-right: 0.5rem;"></div>
 
             </div>
             
             <div *ngFor="let val of outputdata; let i = index">
-                <div *ngIf="i < 3" class="bg-grey p-2 pt-4 pb-4 pl-2 pb-2 mt-2 mb-2 br14 font-bold">
+                <div *ngIf="i < 3" [ngClass]="getBorder(val?.sentiment_class)" class="bg-grey box-shadow-grey box p-2 pt-4 pb-4 pl-2 pb-2 mt-2 mb-2 br14 font-bold">
                     <h6>{{val?.text[0].toUpperCase()}}{{val?.text.slice(1)}}</h6>
                 </div>
             </div>

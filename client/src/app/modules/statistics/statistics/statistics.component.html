@@ -6,37 +6,37 @@
                 <div class="col-md-2 col-6 text-center">
                     <div class="ml-2  box-shadow-grey br14 p-3">
                         <div class="mb-3 font-baloo f12">Total tweets (5)</div>
-                        <span class="icon-fire f50 pt-3 text-dark">32</span>
+                        <span class="icon-fire f50 pt-3 text-dark">{{outputdata?.length}}</span>
                     </div>
                 </div>
                 <div class="col-md-2 col-6 text-center">
                     <div class="ml-2  box-shadow-grey br14 p-3">
                         <div class="mb-3 font-baloo f12">Tweets - score 5</div>
-                        <span class="icon-fire f50 pt-3 text-highly-violent">32</span>
+                        <span class="icon-fire f50 pt-3 text-highly-violent">{{sentimentScoreObj['5']}}</span>
                     </div>
                 </div>
                 <div class="col-md-2 col-6 text-center">
                     <div class="ml-2 box-shadow-grey br14 p-3">
                         <div class="mb-3 font-baloo f12">Tweets - score 4</div>
-                        <span class="icon-fire f50 pt-3 text-high-violent">32</span>
+                        <span class="icon-fire f50 pt-3 text-high-violent">{{sentimentScoreObj['4']}}</span>
                     </div>
                 </div>
                 <div class="col-md-2 col-6 text-center">
                     <div class="ml-2 box-shadow-grey br14 p-3">
                         <div class="mb-3 font-baloo f12">Tweets - score 3</div>
-                        <span class="icon-fire f50 pt-3 text-neutral-violent">32</span>
+                        <span class="icon-fire f50 pt-3 text-neutral-violent">{{sentimentScoreObj['3']}}</span>
                     </div>
                 </div>
                 <div class="col-md-2 col-6 text-center">
                     <div class="ml-2  box-shadow-grey br14 p-3">
                         <div class="mb-3 font-baloo f12">Tweets - score 2</div>
-                        <span class="icon-fire f50 pt-3 text-lowly-violent">32</span>
+                        <span class="icon-fire f50 pt-3 text-lowly-violent">{{sentimentScoreObj['2']}}</span>
                     </div>
                 </div>
                 <div class="col-md-2 col-6 text-center">
                     <div class="ml-2  box-shadow-grey br14 p-3">
                         <div class="mb-3 font-baloo f12">Tweets - score 1</div>
-                        <span class="icon-fire f50 pt-3 text-low-violent">32</span>
+                        <span class="icon-fire f50 pt-3 text-low-violent">{{sentimentScoreObj['1']}}</span>
                     </div>
                 </div>
             </div>
@@ -46,7 +46,8 @@
         <div id="bar" style="height: 450px;" ></div>
     </div>
     <div class="col-md-4 col-12">
-        <div class="box-shadow-grey br14">
+        <div class="box-shadow-grey text-center br14">
+            <h4 class="text-grey font-baloo pt-3">Intensity of tweets</h4>
             <div id="pipe" style="height: 400px;" ></div>
         </div>
     </div>

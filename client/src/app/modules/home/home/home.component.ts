@@ -35,6 +35,14 @@ export class HomeComponent implements OnInit {
 
   yAxisData: any = [];
 
+  sentimentScoreColorObj = {
+    '1': 'border-low-violent',
+    '2': 'border-lowly-violent',
+    '3': 'border-neutral-violent',
+    '4': 'border-high-violent',
+    '5': 'border-highly-violent'
+  }
+
   ngOnInit(): void {
 
     for (let i = 0;i < outputdata.length; i++) {
@@ -74,6 +82,10 @@ export class HomeComponent implements OnInit {
 
     this.myChart.setOption(option);
 
+  }
+
+  getBorder(score) {
+    return this.sentimentScoreColorObj[score]
   }
 
 }

@@ -49,6 +49,10 @@
 }
 
 // Border radius
+.br3{
+    border-radius: 3px;
+}
+
 .br5{
     border-radius: 5px;
 }
@@ -65,6 +69,26 @@
 .card{
     background: #F5F5F7;
     border-radius: 14px;
+}
+
+.border-highly-violent {
+    border: 2.5px solid #14557b;
+}
+
+.border-high-violent {
+    border: 2.5px solid #1779b3;
+}
+
+.border-neutral-violent {
+    border: 2.5px solid rgb(22, 200, 224);
+}
+
+.border-lowly-violent{
+    border: 2.5px solid rgb(22, 224, 204);
+}
+
+.border-low-violent{
+    border: 2.5px solid #7fcec5;
 }
 
 .bg-highly-violent {

@@ -5,6 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidebarModule } from './components/sidebar/sidebar.module';
 import { NgxEchartsModule } from 'ngx-echarts';
+import * as $ from 'jquery';
+import { AuthService } from './services/data.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -13,10 +17,11 @@ import { NgxEchartsModule } from 'ngx-echarts';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     SidebarModule,
     NgxEchartsModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

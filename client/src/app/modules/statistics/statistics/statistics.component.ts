@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as echarts from 'echarts';
 import { data } from '../../../data/result.js';
-import { outputdata } from '../../../data/output.js';
+import { outputdata } from '../../../../../../tweetsdata/output.js';
 
 
 @Component({
@@ -71,26 +71,27 @@ export class StatisticsComponent implements OnInit {
         });
 
 
+        console.log('data', this.hashtags)
         this.outputdata.map(data => {
-            if(data.hashtags.includes('#blacklivesmatter')) {
-                this.retweetData['#blacklivesmatter'] += data?.retweetcount;
-                this.followerData['#blacklivesmatter'] += data?.followers;
+            if(data.hashtags.includes('#maga')) {
+                this.retweetData['#maga'] += data?.retweetcount;
+                this.followerData['#maga'] += data?.followers;
             } 
-            if(data.hashtags.includes('#blm')) {
-                this.retweetData['#blm'] += data?.retweetcount;
-                this.followerData['#blm'] += data?.followers;
+            if(data.hashtags.includes('#trump')) {
+                this.retweetData['#trump'] += data?.retweetcount;
+                this.followerData['#trump'] += data?.followers;
             }
-            if(data.hashtags.includes('#andrewbrown')) {
-                this.retweetData['#andrewbrown'] += data?.retweetcount;
-                this.followerData['#andrewbrown'] += data?.followers;
+            if(data.hashtags.includes('#capitolattack')) {
+                this.retweetData['#capitolattack'] += data?.retweetcount;
+                this.followerData['#capitolattack'] += data?.followers;
             }
-            if(data.hashtags.includes('#breonnataylor')) {
-                this.retweetData['#breonnataylor'] += data?.retweetcount;
-                this.followerData['#breonnataylor'] += data?.followers;
+            if(data.hashtags.includes('#terrorism')) {
+                this.retweetData['#terrorism'] += data?.retweetcount;
+                this.followerData['#terrorism'] += data?.followers;
             } 
-            if(data.hashtags.includes('#roblox')) {
-                this.retweetData['#roblox'] += data?.retweetcount
-                this.followerData['#roblox'] += data?.followers;
+            if(data.hashtags.includes('#biden')) {
+                this.retweetData['#biden'] += data?.retweetcount
+                this.followerData['#biden'] += data?.followers;
             }
         });
 
@@ -228,7 +229,7 @@ export class StatisticsComponent implements OnInit {
                     emphasis: {
                         label: {
                             show: true,
-                            fontSize: '40',
+                            fontSize: '20',
                             fontWeight: 'bold'
                         }
                     },

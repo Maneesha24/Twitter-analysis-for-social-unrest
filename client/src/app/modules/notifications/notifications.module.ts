@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { NotificationsRoutingModule } from './notifications-routing.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -9,7 +10,8 @@ import { NotificationsRoutingModule } from './notifications-routing.module';
   declarations: [NotificationsComponent],
   imports: [
     CommonModule,
-    NotificationsRoutingModule
+    NotificationsRoutingModule,
+    FormsModule
   ]
 })
 export class NotificationsModule { }

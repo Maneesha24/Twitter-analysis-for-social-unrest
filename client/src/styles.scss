@@ -19,6 +19,19 @@
     box-shadow: 0px 3px 6px #a5a5a5;
 }
 
+.overflow-hidden{
+    overflow: hidden;
+}
+
+.text-overflow-ellipsis{
+    text-overflow: ellipsis;
+}
+
+//Height
+.h10{
+    height: 41px;
+}
+
 // Font size
 .f20{
     font-size: 20px;
@@ -73,63 +86,91 @@
 
 .border-highly-violent {
     border: 2.5px solid #14557b;
+    // border: 2.5px solid #000000;
 }
 
 .border-high-violent {
     border: 2.5px solid #1779b3;
+    // border: 2.5px solid #000000be;
 }
 
 .border-neutral-violent {
     border: 2.5px solid rgb(22, 200, 224);
+    // border: 2.5px solid #00000091;
 }
 
 .border-lowly-violent{
     border: 2.5px solid rgb(22, 224, 204);
+    // border: 2.5px solid #00000067;
 }
 
 .border-low-violent{
     border: 2.5px solid #7fcec5;
+    // border: 2.5px solid #0000003a;
 }
 
 .bg-highly-violent {
     background-color: #14557b;
+    // background-color: #000000;
 }
 
 .bg-high-violent {
     background-color: #1779b3;
+    // background-color: #000000be;
 }
 
 .bg-neutral-violent {
     background-color: rgb(22, 200, 224);
+    // background-color: #00000091;
 }
 
 .bg-lowly-violent{
     background-color: rgb(22, 224, 204);
+    // background-color: #00000067;
 }
 
 .bg-low-violent{
     background-color: #7fcec5;
+    // background-color: #0000003a;
 }
 
 .text-highly-violent{
     color: rgb(0, 217, 255);
     color: #14557b;
+    // color: #000000;
 }
 
 .text-high-violent{
     color: rgb(3, 218, 247);
     color: #1779b3;
+    // color: #000000be;
 }
 
 .text-neutral-violent{
     color: rgb(22, 200, 224);
+    // color: #00000091;
 }
 
 .text-lowly-violent{
     color: rgb(22, 224, 204);
+    // color: #00000067;
 }
 
 .text-low-violent{
-    // color: rgb(30, 191, 174);
     color: #7fcec5;
+    // color: #0000003a;
+}
+
+.acknowledgment-bar {
+    font-size: 13px;
+    font-weight: bolder;
+    bottom: 5%;
+    left: 40%;
+    position: absolute;
+    border-radius: 5px;
+    min-width: 400px;
+    height: 40px;
+    color: hsla(0,0%,100%,.7);
+    background-color: #323232;
+    box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%);
 }
